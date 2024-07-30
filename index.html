@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
+      /* Navbar */
       article {
         display: none;
       }
@@ -26,6 +27,52 @@
       article.active {
         display: block;
       }
+
+      /* Project Portfolio Category */
+      .project-item {
+        display: none;
+      }
+
+      .project-item.active {
+        display: block;
+      }
+
+      /* image clients responsive */
+      .clients {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .clients-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+      }
+
+      .clients-item {
+        margin: 10px;
+      }
+
+      .responsive-image {
+        max-width: 100%; /* Ensure the image does not exceed the container's width */
+        height: auto; /* Maintain aspect ratio */
+      }
+
+      /* Media queries for responsive design */
+      @media (max-width: 768px) {
+        .clients-list {
+          flex-direction: column; /* Stack items vertically on smaller screens */
+        }
+
+        .clients-item {
+          width: 100%;
+        }
+      }
+
   </style>
 </head>
 
@@ -141,7 +188,7 @@
           </li>
 
           <li class="social-item">
-            <a href="https://www.linkedin.com/in/leeangelomollo/?original_referer=" class="social-link">
+            <a href="https://www.linkedin.com/in/leeangelomollo/" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
@@ -288,13 +335,13 @@
 
             <li class="clients-item">
               <a href="#">
-                <img src="./assets/images/client_1_DevconKids.png" alt="client logo" width="600" height="80">
+                <img src="./assets/images/client_1_DevconKids.png" alt="client logo" class="responsive-image">
               </a>
             </li>
 
             <li class="clients-item">
               <a href="#">
-                <img src="./assets/images/client_2_PintoArt.png" alt="client logo" width="500" height="80">
+                <img src="./assets/images/client_2_PintoArt.png" alt="client logo" class="responsive-image">
               </a>
             </li>
 
@@ -327,7 +374,7 @@
 
             <h4 style="color: white;">Bachelor of Science in Information Technology</h4>
 
-            <span>2020 - 2024</span>
+            <span>2020 — 2024</span>
 
             <p class="timeline-text">
               Eulogio "Amang" Rodriguez Institute of Science and Technology - Manila
@@ -461,15 +508,11 @@
           </li>
 
           <li class="filter-item">
-            <button data-filter-btn>Web design</button>
+            <button data-filter-btn>Websites</button>
           </li>
 
           <li class="filter-item">
             <button data-filter-btn>Applications</button>
-          </li>
-
-          <li class="filter-item">
-            <button data-filter-btn>Web development</button>
           </li>
 
         </ul>
@@ -478,7 +521,7 @@
 
           <button class="filter-select" data-select>
 
-            <div class="select-value" data-selecct-value>Select category</div>
+            <div class="select-value" data-select-value>Select Category</div>
 
             <div class="select-icon">
               <ion-icon name="chevron-down"></ion-icon>
@@ -493,15 +536,11 @@
             </li>
 
             <li class="select-item">
-              <button data-select-item>Web design</button>
+              <button data-select-item>Websites</button>
             </li>
 
             <li class="select-item">
               <button data-select-item>Applications</button>
-            </li>
-
-            <li class="select-item">
-              <button data-select-item>Web development</button>
             </li>
 
           </ul>
@@ -510,8 +549,8 @@
 
         <ul class="project-list">
 
-          <li class="project-item  active" data-filter-item data-category="web development">
-            <a href="#">
+          <li class="project-item  active" data-filter-item data-category="Websites">
+            <a href="https://github.com/leeangelo22/Pinto_Art_Museum">
 
               <figure class="project-img">
                 <div class="project-item-icon-box">
@@ -523,13 +562,31 @@
 
               <h3 class="project-title">Pintô Art Museum</h3>
 
-              <p class="project-category">Web development</p>
+              <p class="project-category">Website</p>
 
             </a>
           </li>
 
-          <li class="project-item  active" data-filter-item data-category="web development">
-            <a href="#">
+          <li class="project-item  active" data-filter-item data-category="Websites">
+            <a href="https://github.com/Maynard1230/PintoArtMuseum_TicketingSystem">
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/project-4.png" alt="Pintô Art Museum" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">Pintô Art Museum: Ticketing System</h3>
+
+              <p class="project-category">Website</p>
+
+            </a>
+          </li>
+
+          <li class="project-item  active" data-filter-item data-category="Websites">
+            <a href="https://github.com/jakenapay/Inventory-Management-System">
 
               <figure class="project-img">
                 <div class="project-item-icon-box">
@@ -539,27 +596,27 @@
                 <img src="./assets/images/project-2.png" alt="Devcon Kids" loading="lazy">
               </figure>
 
-              <h3 class="project-title">Devcon Kids Inventory</h3>
+              <h3 class="project-title">Devcon Kids: Inventory Management System</h3>
 
-              <p class="project-category">Web development</p>
+              <p class="project-category">Website</p>
 
             </a>
           </li>
 
-          <li class="project-item  active" data-filter-item data-category="web design">
-            <a href="#">
+          <li class="project-item  active" data-filter-item data-category="Applications">
+            <a href="https://github.com/jakenapay/EARESCUE">
 
               <figure class="project-img">
                 <div class="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
                 </div>
 
-                <img src="./assets/images/project-3.png" alt="fundo" loading="lazy">
+                <img src="./assets/images/project-3.png" alt="EARESCUE" loading="lazy">
               </figure>
 
               <h3 class="project-title">EARESCUE</h3>
 
-              <p class="project-category">Applications</p>
+              <p class="project-category">Application</p>
 
             </a>
           </li>
@@ -805,6 +862,7 @@
   <script src="./assets/js/script.js"></script>
 
   <script>
+    // Navbar
     document.addEventListener('DOMContentLoaded', function() {
         const navLinks = document.querySelectorAll('.navbar-link');
         const articles = document.querySelectorAll('article');
@@ -824,6 +882,51 @@
                 targetArticle.classList.add('active');
             });
         });
+    });
+
+    // Project Category Filter
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('[data-filter-btn]');
+      const filterItems = document.querySelectorAll('[data-filter-item]');
+      const selectButton = document.querySelector('[data-select]');
+      const selectListItems = document.querySelectorAll('[data-select-item]');
+      const selectValue = document.querySelector('[data-select-value]');
+
+      function filterProjects(category) {
+        filterItems.forEach(item => {
+          const itemCategory = item.getAttribute('data-category');
+          if (category === 'All' || category === itemCategory) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
+      }
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          const category = button.textContent;
+          filterProjects(category);
+        });
+      });
+
+      selectButton.addEventListener('click', function() {
+        selectButton.classList.toggle('active');
+      });
+
+      selectListItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const category = item.textContent;
+          selectValue.textContent = category;
+          selectButton.classList.remove('active');
+          filterProjects(category);
+        });
+      });
+
+      // Initial filter to show all projects
+      filterProjects('All');
     });
   </script>
 
